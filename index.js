@@ -51,6 +51,12 @@ const listAllMyCities = (allCities) => {
 
 listAllMyCities(cities);
 
+// Ascending/Descending button click
+ascendingDescendingPopulationButton.addEventListener("click", function () {
+	cities.reverse();
+	filterCities();
+});
+
 // Filter
 let filterCities = () => {
 	const dropdownOption = document.getElementsByClassName("filter-option")[0].value;
