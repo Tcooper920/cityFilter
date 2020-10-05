@@ -34,6 +34,9 @@ const cities = [
   { name: "Philadelphia", population: 1526006, landmark: "Independence Hall" },
 ];
 
+// Sort by population
+cities.sort((a, b) => a.population - b.population);
+
 // Populate page with city info
 const listAllMyCities = (allCities) => {
 	const cityList = allCities.map(allCities => {
