@@ -50,9 +50,16 @@ listAllMyCities(cities);
 
 // Filter
 let filterCities = () => {
+	const dropdownOption = document.getElementsByClassName("filter-option")[0].value;
 	const inputFieldText = userInputText.value.toLowerCase();
 	
-	var filteredCityArray = cities.filter(city => city.name.toLowerCase().includes(inputFieldText));
+	// Dropdown choices
+	if (dropdownOption === "Name") {
+		var filteredCityArray = cities.filter(city => city.name.toLowerCase().includes(inputFieldText));
+	} 
+	if (dropdownOption === "Landmark") {
+		var filteredCityArray = cities.filter(city => city.landmark.toLowerCase().includes(inputFieldText));
+	}
 	
 	cityContainer.innerHTML = "";
 	
