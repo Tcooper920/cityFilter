@@ -48,3 +48,24 @@ const listAllMyCities = (allCities) => {
 
 listAllMyCities(cities);
 
+// Filter
+let filterCities = () => {
+	const inputFieldText = userInputText.value.toLowerCase();
+	
+	var filteredCityArray = cities.filter(city => city.name.toLowerCase().includes(inputFieldText));
+	
+	cityContainer.innerHTML = "";
+	
+	if (filteredCityArray.length !== 0) {	
+		filteredCityArray.forEach(function (filteredCityArray) {
+			cityContainer.innerHTML += 
+				`<div class='city-information'>
+				<span class='bold'>City:</span> ${filteredCityArray.name}<br>
+				<span class='bold'>Population:</span> ${filteredCityArray.population}<br>
+				<span class='bold'>Popular Landmark:</span> ${filteredCityArray.landmark}</div>`;
+		});
+	}
+}
+
+document.addEventListener("keyup", filterCities);
+
