@@ -34,3 +34,17 @@ const cities = [
   { name: "Philadelphia", population: 1526006, landmark: "Independence Hall" },
 ];
 
+// Populate page with city info
+const listAllMyCities = (allCities) => {
+	const cityList = allCities.map(allCities => {
+		return `<div class='city-information'>
+				<span class='bold'>City:</span> ${allCities.name}<br>
+				<span class='bold'>Population:</span> ${allCities.population}<br>
+				<span class='bold'>Popular Landmark:</span> ${allCities.landmark}</div>`;
+	});
+
+	cityContainer.innerHTML += cityList.join("");
+}
+
+listAllMyCities(cities);
+
