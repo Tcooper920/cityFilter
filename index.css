@@ -27,6 +27,7 @@ border-radius: 5px;
 .filter-option {
 	-webkit-appearance: none;
 	cursor: pointer;
+	border-left: .5rem solid #03A9F4;
 }
 
 .ascending-descending-population-btn {
